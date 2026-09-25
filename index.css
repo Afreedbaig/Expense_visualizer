@@ -191,8 +191,6 @@ body {
     font-family: "poppins";
 }
 @media (width<500px) {
-    .main {
-    }
     .tcontainer {
         flex-direction: column;
         /* justify-content: center; */
