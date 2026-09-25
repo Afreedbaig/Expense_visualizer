@@ -78,11 +78,13 @@ body {
     justify-content: space-around;
     background-color: #f5f7fb;
 }
+
 .transactions {
     width: 45%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
+
 @keyframes slidein {
     from {
         opacity: 0;
@@ -187,4 +189,28 @@ body {
     color: white;
     font-size: medium;
     font-family: "poppins";
+}
+@media (width<500px) {
+    .main {
+    }
+    .tcontainer {
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        height: 40%;
+
+        /* width: 80%; */
+    }
+    .transactions {
+        width: 90%;
+        height: 45%;
+    }
+    .edittransactions {
+        width: 90%;
+        height: 20rem;
+    }
+    .main {
+        height: 95%;
+        max-height: 1000px;
+    }
 }
