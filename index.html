@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css" />
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+        <div class="main">
+            <h2>Expense Tracker</h2>
+            <div class="balancecontainer">
+                <p>Your Balance</p>
+                <h2>&#8377;<span id="balance"></span></h2>
+                <div class="innerbalance">
+                    <div class="innerbox">
+                        <p>Income</p>
+                        <h2>&#8377;<span id="income"></span></h2>
+                    </div>
+                    <div class="innerbox red">
+                        <p>Expenses</p>
+                        <h2>&#8377;<span id="expense"></span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="tcontainer">
+                <div class="transactions">
+                    <p>Transactions</p>
+                    <div id="transactions"></div>
+                </div>
+                <div class="edittransactions">
+                    <p class="addtrans">Add Transactions</p>
+                    <label for="des">Description</label><br />
+                    <input type="text" name="des" id="descr" />
+                    <label for="amt">Amount</label><br />
+                    <input
+                        type="text"
+                        name="amt"
+                        class="amt"
+                        id="amtinput"
+                        oninput="
+                            this.value =
+                                this.value.match(/^[+-]?\d*/)?.[0] || ''
+                        "
+                        placeholder="e.g. +123 or -456"
+                    />
+                    <p>use negative(-) for expenses</p>
+                    <button id="action">Add Transaction</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
